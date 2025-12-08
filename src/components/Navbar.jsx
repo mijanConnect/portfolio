@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import resumePdf from "../assets/Resume.pdf";
 
 export default function Navbar({ isDark, onToggleDark }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,8 +20,18 @@ export default function Navbar({ isDark, onToggleDark }) {
     { to: "/", label: "About Me", end: true },
     { to: "/portfolio", label: "Portfolio" },
     { to: "/contact", label: "Contact" },
-    { to: "/blog", label: "Blogs" },
+    { to: "/blog", label: "Blog" },
   ];
+  const handleResumeDownload = () => {
+    // Create a link element and trigger download
+    const link = document.createElement("a");
+    link.href = resumePdf;
+    link.download = "Resume_of_Mijanur_Rahman.pdf";
+    link.target = "_blank";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const handleToggle = () => setIsOpen((prev) => !prev);
   const handleClose = () => setIsOpen(false);
@@ -73,13 +84,13 @@ export default function Navbar({ isDark, onToggleDark }) {
           </button>
 
           {/* Social Links - Center (always show) */}
-          <div className="flex gap-4">
+          <div className="flex gap-6">
             <a
               href="https://www.linkedin.com/in/mijanConnect"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
-              className={`text-xl transition-all ${
+              className={`text-3xl transition-all ${
                 isDark
                   ? "text-white hover:text-yellow-400"
                   : "text-gray-900 hover:text-blue-600"
@@ -92,7 +103,7 @@ export default function Navbar({ isDark, onToggleDark }) {
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
-              className={`text-xl transition-all ${
+              className={`text-3xl transition-all ${
                 isDark
                   ? "text-white hover:text-yellow-400"
                   : "text-gray-900 hover:text-blue-600"
@@ -103,7 +114,7 @@ export default function Navbar({ isDark, onToggleDark }) {
             <a
               href="mailto:mijan.connect@gmail.com"
               aria-label="Email"
-              className={`text-xl transition-all ${
+              className={`text-3xl transition-all ${
                 isDark
                   ? "text-white hover:text-yellow-400"
                   : "text-gray-900 hover:text-blue-600"
@@ -124,16 +135,16 @@ export default function Navbar({ isDark, onToggleDark }) {
             aria-label="Toggle navigation menu"
           >
             {isOpen ? (
-              <i className="fa-solid fa-xmark text-xl" />
+              <i className="fa-solid fa-xmark text-3xl" />
             ) : (
-              <i className="fa-solid fa-bars text-xl" />
+              <i className="fa-solid fa-bars text-3xl" />
             )}
           </button>
         </div>
 
         {/* Navigation menu */}
         <ul
-          className={`flex flex-col md:flex-row md:items-center md:justify-center gap-6 md:gap-12 py-4 md:py-0 ${
+          className={`flex flex-col md:flex-row md:items-center md:justify-center gap-6 md:gap-12 py-4 md:py-0 items-center ${
             isOpen ? "flex" : "hidden"
           } md:flex`}
         >
@@ -144,6 +155,19 @@ export default function Navbar({ isDark, onToggleDark }) {
               </NavLink>
             </li>
           ))}
+          <li onClick={handleClose}>
+            <button
+              onClick={handleResumeDownload}
+              className={`${base} inline-flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
+                isDark
+                  ? "bg-yellow-400 text-gray-900 hover:bg-yellow-300"
+                  : "bg-blue-600 text-white hover:bg-blue-700"
+              }`}
+            >
+              Resume
+              <i className="fa-solid fa-download text-sm"></i>
+            </button>
+          </li>
         </ul>
       </div>
     </nav>

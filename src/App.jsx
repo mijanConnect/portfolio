@@ -1,9 +1,8 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import Logo from "./components/Logo";
 import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
 import SocialLink from "./components/SocialLink";
@@ -13,6 +12,24 @@ import Footer from "./components/Footer";
 
 function App() {
   const [isDark, setIsDark] = useState(true);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // Show/hide scroll to top button based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   // Removed unused location variable
 
   return (
@@ -92,6 +109,21 @@ function App() {
           </div>
         </div>
         <Footer isDark={isDark} />
+
+        {/* Scroll to Top Button */}
+        {showScrollTop && (
+          <button
+            onClick={scrollToTop}
+            className={`fixed bottom-8 right-8 z-50 p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 ${
+              isDark
+                ? "bg-yellow-400 text-gray-900 hover:bg-yellow-300"
+                : "bg-blue-600 text-white hover:bg-blue-700"
+            }`}
+            aria-label="Scroll to top"
+          >
+            <i className="fa-solid fa-arrow-up text-xl"></i>
+          </button>
+        )}
       </div>
     </>
   );
