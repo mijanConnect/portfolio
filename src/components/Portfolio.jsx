@@ -3,6 +3,14 @@ import { useState } from "react";
 export default function Portfolio({ isDark }) {
   const [activeSection, setActiveSection] = useState("overview");
 
+  const handleTabClick = (section) => {
+    setActiveSection(section);
+    const element = document.getElementById(`section-${section}`);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   const portfolioData = {
     overview: {
       title: "Overview",
@@ -130,9 +138,10 @@ export default function Portfolio({ isDark }) {
         </div>
 
         {/* Navigation Tabs */}
+        {/* Sticky Navigation Tabs */}
         <div
-          className={`flex flex-wrap gap-3 mb-12 pb-6 border-b ${
-            isDark ? "border-gray-700" : "border-gray-300"
+          className={`sticky top-0 z-50 flex flex-wrap gap-3 pb-6 pt-4 border-b ${
+            isDark ? "border-gray-700 bg-gray-900" : "border-gray-300 bg-white"
           }`}
         >
           {[
@@ -145,7 +154,7 @@ export default function Portfolio({ isDark }) {
           ].map((section) => (
             <button
               key={section}
-              onClick={() => setActiveSection(section)}
+              onClick={() => handleTabClick(section)}
               className={`px-4 py-2 rounded-lg font-semibold transition-all capitalize ${
                 activeSection === section
                   ? isDark
@@ -164,10 +173,10 @@ export default function Portfolio({ isDark }) {
         {/* Content Sections */}
 
         {/* Overview Section */}
-        {activeSection === "overview" && (
+        <div id="section-overview" className="mb-16 scroll-mt-28">
           <div className="animate-fadeIn">
             <p
-              className={`text-lg leading-relaxed ${
+              className={`text-lg leading-relaxed mt-4 ${
                 isDark ? "text-gray-300" : "text-gray-700"
               }`}
             >
@@ -205,10 +214,17 @@ export default function Portfolio({ isDark }) {
               ))}
             </div>
           </div>
-        )}
+        </div>
 
         {/* Experience Section */}
-        {activeSection === "experience" && (
+        <div id="section-experience" className="mb-16 scroll-mt-28">
+          <h2
+            className={`text-3xl font-bold mb-8 ${
+              isDark ? "text-white" : "text-gray-900"
+            }`}
+          >
+            Experience
+          </h2>
           <div className="animate-fadeIn space-y-6">
             {portfolioData.experience.map((exp, index) => (
               <div
@@ -256,10 +272,17 @@ export default function Portfolio({ isDark }) {
               </div>
             ))}
           </div>
-        )}
+        </div>
 
         {/* Projects Section */}
-        {activeSection === "projects" && (
+        <div id="section-projects" className="mb-16 scroll-mt-28">
+          <h2
+            className={`text-3xl font-bold mb-8 ${
+              isDark ? "text-white" : "text-gray-900"
+            }`}
+          >
+            Projects
+          </h2>
           <div className="animate-fadeIn grid grid-cols-1 md:grid-cols-2 gap-6">
             {portfolioData.projects.map((project, index) => (
               <div
@@ -312,10 +335,17 @@ export default function Portfolio({ isDark }) {
               </div>
             ))}
           </div>
-        )}
+        </div>
 
         {/* Education Section */}
-        {activeSection === "education" && (
+        <div id="section-education" className="mb-16 scroll-mt-28">
+          <h2
+            className={`text-3xl font-bold mb-8 ${
+              isDark ? "text-white" : "text-gray-900"
+            }`}
+          >
+            Education
+          </h2>
           <div className="animate-fadeIn space-y-6">
             {portfolioData.education.map((edu, index) => (
               <div
@@ -365,10 +395,17 @@ export default function Portfolio({ isDark }) {
               </div>
             ))}
           </div>
-        )}
+        </div>
 
         {/* Skills Section */}
-        {activeSection === "skills" && (
+        <div id="section-skills" className="mb-16 scroll-mt-28">
+          <h2
+            className={`text-3xl font-bold mb-8 ${
+              isDark ? "text-white" : "text-gray-900"
+            }`}
+          >
+            Skills
+          </h2>
           <div className="animate-fadeIn space-y-8">
             {portfolioData.skills.map((skillGroup, index) => (
               <div key={index}>
@@ -396,10 +433,17 @@ export default function Portfolio({ isDark }) {
               </div>
             ))}
           </div>
-        )}
+        </div>
 
         {/* Certifications Section */}
-        {activeSection === "certifications" && (
+        <div id="section-certifications" className="mb-16 scroll-mt-28">
+          <h2
+            className={`text-3xl font-bold mb-8 ${
+              isDark ? "text-white" : "text-gray-900"
+            }`}
+          >
+            Certifications
+          </h2>
           <div className="animate-fadeIn grid grid-cols-1 md:grid-cols-2 gap-6">
             {portfolioData.certifications.map((cert, index) => (
               <div
@@ -443,7 +487,7 @@ export default function Portfolio({ isDark }) {
               </div>
             ))}
           </div>
-        )}
+        </div>
       </div>
 
       <style>{`
