@@ -2,7 +2,7 @@ export default function About({ isDark }) {
   return (
     <>
       <h1
-        className={`text-center text-[55px] transition-colors mt-[-80px] ${
+        className={`text-center text-[55px] transition-colors -mt-20 ${
           isDark ? "text-gray-300" : "text-gray-700"
         }`}
       >
