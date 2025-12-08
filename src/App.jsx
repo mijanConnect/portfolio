@@ -1,18 +1,23 @@
 import "./App.css";
 import { useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import About from "./components/About";
+import Contact from "./components/Contact";
 import Logo from "./components/Logo";
 import Navbar from "./components/Navbar";
+import Portfolio from "./components/Portfolio";
 import SocialLink from "./components/SocialLink";
+import Blog from "./components/Blog";
 
 function App() {
   const [isDark, setIsDark] = useState(true);
+  // Removed unused location variable
 
   return (
     <>
       <div
         className={`${
-          isDark ? "bg-black" : "bg-white"
+          isDark ? "bg-black text-white" : "bg-white text-gray-900"
         } min-h-screen flex flex-col transition-colors`}
       >
         {/* Theme Toggle Switch */}
@@ -61,9 +66,19 @@ function App() {
           <Navbar isDark={isDark} />
           <SocialLink isDark={isDark} />
         </div>
-        <div className="flex-1 flex items-center justify-center">
-          <div className="container mx-auto max-w-[1000px]">
-            <About isDark={isDark} />
+        <div
+          className={`flex-1 ${
+            isDark ? "bg-black text-white" : "bg-white text-gray-900"
+          } py-12 transition-colors`}
+        >
+          <div className="container mx-auto max-w-[1000px] space-y-6">
+            <Routes>
+              <Route path="/" element={<About isDark={isDark} />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
           </div>
         </div>
       </div>

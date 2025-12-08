@@ -7,9 +7,7 @@ export default function Logo() {
       </h2>
       <hr className="border-2 border-gray-400 mt-1 w-[15%] mx-auto" /> */}
       <div className="container mx-auto max-w-[1000px]">
-        <h1 className="text-center text-[35px] text-white">
-          MIJANUR RAHMAN
-        </h1>
+        <h1 className="text-center text-[35px] text-white">MIJANUR RAHMAN</h1>
         <hr className="border-gray-400 mt-1 mx-auto" />
       </div>
     </>
