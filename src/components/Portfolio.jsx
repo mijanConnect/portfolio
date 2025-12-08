@@ -1,8 +1,46 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { portfolioData } from "../data/portfolioData";
 
 export default function Portfolio({ isDark }) {
   const [activeSection, setActiveSection] = useState("overview");
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "-20% 0px -60% 0px",
+      threshold: 0,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id.replace("section-", "");
+          setActiveSection(sectionId);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
+    // Observe all sections
+    const sections = [
+      "overview",
+      "experience",
+      "projects",
+      "education",
+      "skills",
+      "certifications",
+    ];
+    sections.forEach((section) => {
+      const element = document.getElementById(`section-${section}`);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const handleTabClick = (section) => {
     setActiveSection(section);
