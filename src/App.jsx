@@ -9,6 +9,7 @@ import Portfolio from "./components/Portfolio";
 import SocialLink from "./components/SocialLink";
 import Blog from "./components/Blog";
 import BlogPost from "./components/BlogPost";
+import Footer from "./components/Footer";
 
 function App() {
   const [isDark, setIsDark] = useState(true);
@@ -21,10 +22,10 @@ function App() {
           isDark ? "bg-black text-white" : "bg-white text-gray-900"
         } min-h-screen flex flex-col transition-colors`}
       >
-        {/* Theme Toggle Switch */}
+        {/* Theme Toggle Switch - Desktop only */}
         <button
           onClick={() => setIsDark(!isDark)}
-          className="fixed top-6 right-6 z-50 focus:outline-none group"
+          className="hidden md:block fixed top-6 right-6 z-50 focus:outline-none group"
         >
           <div
             className={`relative inline-flex h-10 w-20 items-center rounded-full transition-all duration-300 ${
@@ -61,21 +62,28 @@ function App() {
         <div
           className={`${
             isDark ? "bg-gray-800" : "bg-gray-100"
-          } py-16 transition-colors`}
+          } py-2 md:py-16 transition-colors`}
         >
-          {/* <Logo /> */}
-          <Navbar isDark={isDark} />
-          <SocialLink isDark={isDark} />
+          <div className="container mx-auto max-w-5xl px-4">
+            {/* <Logo /> */}
+            <Navbar isDark={isDark} onToggleDark={() => setIsDark(!isDark)} />
+            <div className="hidden md:block">
+              <SocialLink isDark={isDark} />
+            </div>
+          </div>
         </div>
         <div
           className={`flex-1 ${
             isDark ? "bg-gray-900 text-white" : "bg-white text-gray-900"
-          } py-12 transition-colors`}
+          } py-10 md:py-12 transition-colors`}
         >
-          <div className="container mx-auto max-w-[1000px] space-y-6">
+          <div className="container mx-auto max-w-[1100px] px-4 space-y-6">
             <Routes>
               <Route path="/" element={<About isDark={isDark} />} />
-              <Route path="/portfolio" element={<Portfolio isDark={isDark} />} />
+              <Route
+                path="/portfolio"
+                element={<Portfolio isDark={isDark} />}
+              />
               <Route path="/contact" element={<Contact isDark={isDark} />} />
               <Route path="/blog" element={<Blog isDark={isDark} />} />
               <Route path="/blog/:id" element={<BlogPost isDark={isDark} />} />
@@ -83,6 +91,7 @@ function App() {
             </Routes>
           </div>
         </div>
+        <Footer isDark={isDark} />
       </div>
     </>
   );
