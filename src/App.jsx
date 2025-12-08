@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
 import SocialLink from "./components/SocialLink";
 import Blog from "./components/Blog";
+import BlogPost from "./components/BlogPost";
 
 function App() {
   const [isDark, setIsDark] = useState(true);
@@ -76,7 +77,8 @@ function App() {
               <Route path="/" element={<About isDark={isDark} />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog" element={<Blog isDark={isDark} />} />
+              <Route path="/blog/:id" element={<BlogPost isDark={isDark} />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </div>
