@@ -31,8 +31,8 @@ export default function Contact({ isDark }) {
     {
       icon: "fa-phone",
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      value: "+880 1735 893941",
+      link: "tel:+8801735893941",
     },
     {
       icon: "fa-envelope",
@@ -43,7 +43,7 @@ export default function Contact({ isDark }) {
     {
       icon: "fa-map-marker-alt",
       label: "Location",
-      value: "Your City, Country",
+      value: "Dhaka, Bangladesh",
       link: "#",
     },
   ];
@@ -127,7 +127,7 @@ export default function Contact({ isDark }) {
                   rel="noreferrer"
                   className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all ${
                     isDark
-                      ? "bg-gray-700 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900"
+                      ? "bg-gray-700 text-white hover:bg-yellow-400 hover:text-gray-900"
                       : "bg-gray-200 text-blue-600 hover:bg-blue-600 hover:text-white"
                   }`}
                 >
@@ -139,7 +139,7 @@ export default function Contact({ isDark }) {
                   rel="noreferrer"
                   className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all ${
                     isDark
-                      ? "bg-gray-700 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900"
+                      ? "bg-gray-700 text-white hover:bg-yellow-400 hover:text-gray-900"
                       : "bg-gray-200 text-blue-600 hover:bg-blue-600 hover:text-white"
                   }`}
                 >
@@ -149,7 +149,7 @@ export default function Contact({ isDark }) {
                   href="mailto:mijan.connect@gmail.com"
                   className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all ${
                     isDark
-                      ? "bg-gray-700 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900"
+                      ? "bg-gray-700 text-white hover:bg-yellow-400 hover:text-gray-900"
                       : "bg-gray-200 text-blue-600 hover:bg-blue-600 hover:text-white"
                   }`}
                 >
@@ -201,7 +201,7 @@ export default function Contact({ isDark }) {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    placeholder="John Doe"
+                    placeholder="Please enter your full name"
                     className={`w-full px-4 py-3 rounded-lg border-2 transition-colors focus:outline-none ${
                       isDark
                         ? "bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400"
@@ -227,7 +227,7 @@ export default function Contact({ isDark }) {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    placeholder="john@example.com"
+                    placeholder="Please enter your email address"
                     className={`w-full px-4 py-3 rounded-lg border-2 transition-colors focus:outline-none ${
                       isDark
                         ? "bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400"
@@ -253,7 +253,7 @@ export default function Contact({ isDark }) {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    placeholder="Project Collaboration"
+                    placeholder="Please enter the subject"
                     className={`w-full px-4 py-3 rounded-lg border-2 transition-colors focus:outline-none ${
                       isDark
                         ? "bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400"
@@ -279,7 +279,7 @@ export default function Contact({ isDark }) {
                     onChange={handleChange}
                     required
                     rows="5"
-                    placeholder="Tell me about your project or inquiry..."
+                    placeholder="Please enter your message or inquiry..."
                     className={`w-full px-4 py-3 rounded-lg border-2 transition-colors focus:outline-none resize-none ${
                       isDark
                         ? "bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400"
