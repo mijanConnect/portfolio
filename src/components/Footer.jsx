@@ -129,7 +129,7 @@ export default function Footer({ isDark }) {
           <p
             className={`text-sm ${isDark ? "text-gray-400" : "text-gray-600"}`}
           >
-            Designed & Developed <span className="text-red-500"></span> by Mijan
+            Designed & Developed <span className="text-red-500"></span> by Mijanur Rahman
           </p>
         </div>
       </div>
