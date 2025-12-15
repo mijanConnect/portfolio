@@ -38,7 +38,7 @@ export default function Blog({ isDark }) {
           {visiblePosts.map((post) => (
             <article
               key={post.id}
-              className={`rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 ${
+              className={`rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col ${
                 isDark
                   ? "bg-gray-800/40 hover:bg-gray-800/60"
                   : "bg-white hover:bg-gray-50"
@@ -61,7 +61,7 @@ export default function Blog({ isDark }) {
               </div>
 
               {/* Blog Content */}
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 {/* Category Badge */}
                 <div className="flex items-center gap-4 mb-3">
                   <span
@@ -102,7 +102,7 @@ export default function Blog({ isDark }) {
 
                 {/* Footer */}
                 <div
-                  className={`flex items-center justify-between pt-4 border-t ${
+                  className={`flex items-center justify-between pt-4 border-t mt-auto ${
                     isDark ? "border-gray-700" : "border-gray-300"
                   }`}
                 >

@@ -2,7 +2,7 @@ export const blogPosts = [
   {
     id: 1,
     title:
-      "🚨 How I Detected and Prevented Next.js Malware Injection in My Project",
+      "How I Detected and Prevented Next.js Malware Injection in My Project",
     date: "December 9, 2025",
     author: "Mijanur Rahman",
     category: "Next.js",
@@ -88,7 +88,7 @@ export const blogPosts = [
   },
   {
     id: 2,
-    title: "🖼️ How Image Handling Works in a React App With a Backend",
+    title: "How Image Handling Works in a React App With a Backend",
     date: "December 8, 2024",
     author: "Mijanur Rahman",
     category: "React",

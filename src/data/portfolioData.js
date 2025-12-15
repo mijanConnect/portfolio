@@ -8,22 +8,31 @@ export const portfolioData = {
       role: "Senior Frontend Developer",
       company: "Tech Solutions Inc.",
       period: "2023 - Present",
-      description:
-        "Leading frontend development team, architecting responsive web applications using React and Next.js",
+      description: [
+        "Developed scalable UI using React and Next.js",
+        "Integrated REST APIs and Redux Toolkit",
+        "Improved performance and SEO by 30%",
+      ],
     },
     {
       role: "Full Stack Developer",
       company: "Digital Innovations Ltd.",
       period: "2021 - 2023",
-      description:
-        "Developed full-stack web applications, optimized performance, and mentored junior developers",
+      description: [
+        "Developed scalable UI using React and Next.js",
+        "Integrated REST APIs and Redux Toolkit",
+        "Improved performance and SEO by 30%",
+      ],
     },
     {
       role: "Junior Web Developer",
       company: "StartUp Hub",
       period: "2020 - 2021",
-      description:
-        "Built responsive websites using HTML, CSS, and JavaScript. Collaborated with design teams.",
+      description: [
+        "Developed scalable UI using React and Next.js",
+        "Integrated REST APIs and Redux Toolkit",
+        "Improved performance and SEO by 30%",
+      ],
     },
   ],
   projects: [
@@ -34,11 +43,15 @@ export const portfolioData = {
         "Full-stack e-commerce solution with React frontend and Node.js backend",
       tags: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
       link: "#",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
       details: {
-        overview: "A comprehensive e-commerce platform designed to provide seamless shopping experiences with modern UI/UX patterns and robust backend infrastructure.",
-        challenge: "Building a scalable platform that handles high traffic, real-time inventory management, and secure payment processing while maintaining excellent performance.",
-        solution: "Implemented microservices architecture with React frontend, Node.js backend, MongoDB for data persistence, and integrated Stripe for payment processing. Used Redis for caching and session management."
+        overview:
+          "A comprehensive e-commerce platform designed to provide seamless shopping experiences with modern UI/UX patterns and robust backend infrastructure.",
+        challenge:
+          "Building a scalable platform that handles high traffic, real-time inventory management, and secure payment processing while maintaining excellent performance.",
+        solution:
+          "Implemented microservices architecture with React frontend, Node.js backend, MongoDB for data persistence, and integrated Stripe for payment processing. Used Redis for caching and session management.",
       },
       features: [
         "User authentication and authorization with JWT",
@@ -48,17 +61,26 @@ export const portfolioData = {
         "Order tracking and management system",
         "Admin dashboard for inventory management",
         "Email notifications for order updates",
-        "Responsive design for all devices"
+        "Responsive design for all devices",
       ],
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Redis", "Stripe API", "JWT", "Tailwind CSS"],
+      technologies: [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Redis",
+        "Stripe API",
+        "JWT",
+        "Tailwind CSS",
+      ],
       results: [
         "Successfully handled 10,000+ daily active users",
         "Reduced page load time by 40% through optimization",
         "Achieved 99.9% uptime with proper error handling",
-        "Increased conversion rate by 25% with improved UX"
+        "Increased conversion rate by 25% with improved UX",
       ],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
     },
     {
       id: 2,
@@ -67,11 +89,15 @@ export const portfolioData = {
         "Real-time task management application with drag-and-drop functionality",
       tags: ["Next.js", "Firebase", "React DnD"],
       link: "#",
-      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop",
       details: {
-        overview: "A collaborative task management tool that helps teams organize, prioritize, and track their work efficiently with real-time synchronization.",
-        challenge: "Creating a real-time collaborative environment where multiple users can interact with tasks simultaneously without conflicts.",
-        solution: "Leveraged Firebase Realtime Database for instant data synchronization, implemented optimistic updates for better UX, and used React DnD for intuitive drag-and-drop interfaces."
+        overview:
+          "A collaborative task management tool that helps teams organize, prioritize, and track their work efficiently with real-time synchronization.",
+        challenge:
+          "Creating a real-time collaborative environment where multiple users can interact with tasks simultaneously without conflicts.",
+        solution:
+          "Leveraged Firebase Realtime Database for instant data synchronization, implemented optimistic updates for better UX, and used React DnD for intuitive drag-and-drop interfaces.",
       },
       features: [
         "Drag-and-drop task organization",
@@ -81,17 +107,23 @@ export const portfolioData = {
         "Comments and file attachments",
         "Board templates for quick setup",
         "Activity timeline and notifications",
-        "Dark mode support"
+        "Dark mode support",
       ],
-      technologies: ["Next.js", "Firebase", "React DnD", "Tailwind CSS", "React Query"],
+      technologies: [
+        "Next.js",
+        "Firebase",
+        "React DnD",
+        "Tailwind CSS",
+        "React Query",
+      ],
       results: [
         "Improved team productivity by 35%",
         "Real-time updates with less than 100ms latency",
         "Used by 50+ teams across different organizations",
-        "95% user satisfaction rate"
+        "95% user satisfaction rate",
       ],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
     },
     {
       id: 3,
@@ -100,11 +132,15 @@ export const portfolioData = {
         "Blogging platform with markdown support and SEO optimization",
       tags: ["React", "Next.js", "Markdown", "PostgreSQL"],
       link: "#",
-      image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=600&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=600&fit=crop",
       details: {
-        overview: "A modern blogging platform that empowers writers to create and publish content with ease, featuring markdown support and powerful SEO capabilities.",
-        challenge: "Building a platform that balances simplicity for writers while providing advanced features like SEO optimization, fast loading times, and content discoverability.",
-        solution: "Used Next.js for server-side rendering and static generation, implemented markdown parsing with syntax highlighting, and integrated comprehensive SEO meta tags and structured data."
+        overview:
+          "A modern blogging platform that empowers writers to create and publish content with ease, featuring markdown support and powerful SEO capabilities.",
+        challenge:
+          "Building a platform that balances simplicity for writers while providing advanced features like SEO optimization, fast loading times, and content discoverability.",
+        solution:
+          "Used Next.js for server-side rendering and static generation, implemented markdown parsing with syntax highlighting, and integrated comprehensive SEO meta tags and structured data.",
       },
       features: [
         "Markdown editor with live preview",
@@ -114,17 +150,24 @@ export const portfolioData = {
         "Comment system with moderation",
         "Tag-based categorization",
         "Reading time estimation",
-        "RSS feed generation"
+        "RSS feed generation",
       ],
-      technologies: ["Next.js", "React", "PostgreSQL", "Markdown-it", "Prisma", "Tailwind CSS"],
+      technologies: [
+        "Next.js",
+        "React",
+        "PostgreSQL",
+        "Markdown-it",
+        "Prisma",
+        "Tailwind CSS",
+      ],
       results: [
         "Achieved 95+ Google PageSpeed score",
         "Ranked on first page for target keywords",
         "Reduced bounce rate by 30%",
-        "Published 100+ articles with 50K+ monthly readers"
+        "Published 100+ articles with 50K+ monthly readers",
       ],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
     },
     {
       id: 4,
@@ -133,11 +176,15 @@ export const portfolioData = {
         "Modern responsive portfolio with dark mode and smooth animations",
       tags: ["React", "Tailwind CSS", "React Router"],
       link: "#",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
       details: {
-        overview: "A personal portfolio website showcasing projects, skills, and professional experience with modern design principles and smooth user interactions.",
-        challenge: "Creating a visually appealing and performant portfolio that stands out while maintaining accessibility and responsive design across all devices.",
-        solution: "Built with React and Tailwind CSS for rapid development, implemented dark/light mode toggle, smooth scroll animations, and optimized images for fast loading."
+        overview:
+          "A personal portfolio website showcasing projects, skills, and professional experience with modern design principles and smooth user interactions.",
+        challenge:
+          "Creating a visually appealing and performant portfolio that stands out while maintaining accessibility and responsive design across all devices.",
+        solution:
+          "Built with React and Tailwind CSS for rapid development, implemented dark/light mode toggle, smooth scroll animations, and optimized images for fast loading.",
       },
       features: [
         "Dark/Light theme toggle with persistence",
@@ -147,17 +194,23 @@ export const portfolioData = {
         "Contact form with validation",
         "Blog integration",
         "Performance optimized",
-        "SEO friendly"
+        "SEO friendly",
       ],
-      technologies: ["React", "Tailwind CSS", "React Router", "Vite", "Font Awesome"],
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "React Router",
+        "Vite",
+        "Font Awesome",
+      ],
       results: [
         "100% Lighthouse accessibility score",
         "Sub-second page load times",
         "Increased client inquiries by 60%",
-        "Featured in design showcases"
+        "Featured in design showcases",
       ],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
     },
   ],
   education: [
