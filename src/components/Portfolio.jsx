@@ -75,7 +75,7 @@ export default function Portfolio({ isDark }) {
         {/* Sticky Navigation Tabs */}
         <div
           className={`sticky top-0 z-50 flex flex-wrap gap-3 pb-6 pt-4 border-b ${
-            isDark ? "border-gray-700 bg-gray-900" : "border-gray-300 bg-white"
+            isDark ? "border-gray-700 bg-(--background-dark)" : "border-gray-300 bg-white"
           }`}
         >
           {[

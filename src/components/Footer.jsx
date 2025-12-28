@@ -4,7 +4,7 @@ export default function Footer({ isDark }) {
   return (
     <footer
       className={`${
-        isDark ? "bg-gray-800 text-white" : "bg-gray-100 text-gray-900"
+        isDark ? "bg-(--background-dark-header) text-white" : "bg-gray-100 text-gray-900"
       } transition-colors`}
     >
       <div className="container mx-auto max-w-[1100px] px-4 py-12">
@@ -21,7 +21,7 @@ export default function Footer({ isDark }) {
             </h3>
             <p
               className={`text-sm leading-relaxed ${
-                isDark ? "text-gray-400" : "text-gray-600"
+                isDark ? "text-[#E0E0E0]" : "text-gray-600"
               }`}
             >
               A passionate Software Engineer dedicated to building scalable and
@@ -32,7 +32,7 @@ export default function Footer({ isDark }) {
           {/* Quick Links */}
           <div>
             <h3
-              className={`text-lg font-bold mb-4 ${
+              className={`text-lg font-semibold mb-4 ${
                 isDark ? "text-accent-dark" : "text-accent-light"
               }`}
             >
@@ -49,10 +49,10 @@ export default function Footer({ isDark }) {
                   <a
                     href={link.href}
                     className={`text-sm transition-colors ${
-                      isDark ? "text-gray-400" : "text-gray-600"
+                      isDark ? "text-white" : "text-gray-600"
                     }`}
                     style={{
-                      color: isDark ? "rgb(156, 163, 175)" : "rgb(75, 85, 99)",
+                      color: isDark ? "#E0E0E0" : "rgb(75, 85, 99)",
                     }}
                     onMouseEnter={(e) => {
                       e.target.style.color = isDark
@@ -61,7 +61,7 @@ export default function Footer({ isDark }) {
                     }}
                     onMouseLeave={(e) => {
                       e.target.style.color = isDark
-                        ? "rgb(156, 163, 175)"
+                        ? "#ffffff"
                         : "rgb(75, 85, 99)";
                     }}
                   >
@@ -75,7 +75,7 @@ export default function Footer({ isDark }) {
           {/* Social Links */}
           <div>
             <h3
-              className={`text-lg font-bold mb-4 ${
+              className={`text-lg font-semibold mb-4 ${
                 isDark ? "text-accent-dark" : "text-accent-light"
               }`}
             >
@@ -89,7 +89,7 @@ export default function Footer({ isDark }) {
                 aria-label="LinkedIn"
                 className="text-2xl transition-colors"
                 style={{
-                  color: isDark ? "rgb(156, 163, 175)" : "rgb(75, 85, 99)",
+                  color: isDark ? "#ffffff" : "rgb(75, 85, 99)",
                 }}
                 onMouseEnter={(e) => {
                   e.target.style.color = isDark
@@ -98,7 +98,7 @@ export default function Footer({ isDark }) {
                 }}
                 onMouseLeave={(e) => {
                   e.target.style.color = isDark
-                    ? "rgb(156, 163, 175)"
+                    ? "#E0E0E0"
                     : "rgb(75, 85, 99)";
                 }}
               >
@@ -111,7 +111,7 @@ export default function Footer({ isDark }) {
                 aria-label="GitHub"
                 className="text-2xl transition-colors"
                 style={{
-                  color: isDark ? "rgb(156, 163, 175)" : "rgb(75, 85, 99)",
+                  color: isDark ? "#E0E0E0" : "rgb(75, 85, 99)",
                 }}
                 onMouseEnter={(e) => {
                   e.target.style.color = isDark
@@ -120,7 +120,7 @@ export default function Footer({ isDark }) {
                 }}
                 onMouseLeave={(e) => {
                   e.target.style.color = isDark
-                    ? "rgb(156, 163, 175)"
+                    ? "#E0E0E0"
                     : "rgb(75, 85, 99)";
                 }}
               >
@@ -131,7 +131,7 @@ export default function Footer({ isDark }) {
                 aria-label="Email"
                 className="text-2xl transition-colors"
                 style={{
-                  color: isDark ? "rgb(156, 163, 175)" : "rgb(75, 85, 99)",
+                  color: isDark ? "#E0E0E0" : "rgb(75, 85, 99)",
                 }}
                 onMouseEnter={(e) => {
                   e.target.style.color = isDark
@@ -140,7 +140,7 @@ export default function Footer({ isDark }) {
                 }}
                 onMouseLeave={(e) => {
                   e.target.style.color = isDark
-                    ? "rgb(156, 163, 175)"
+                    ? "#E0E0E0"
                     : "rgb(75, 85, 99)";
                 }}
               >
@@ -160,12 +160,12 @@ export default function Footer({ isDark }) {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p
-            className={`text-sm ${isDark ? "text-gray-400" : "text-gray-600"}`}
+            className={`text-sm ${isDark ? "text-[#E0E0E0]" : "text-gray-600"}`}
           >
             &copy; {currentYear} Mijanur Rahman. All rights reserved.
           </p>
           <p
-            className={`text-sm ${isDark ? "text-gray-400" : "text-gray-600"}`}
+            className={`text-sm ${isDark ? "text-[#E0E0E0]" : "text-gray-600"}`}
           >
             Designed & Developed <span className="text-red-500"></span> by
             Mijanur Rahman

@@ -11,6 +11,10 @@
   --primary-dark: #1a1d2b;
   --primary-light: #5a68b8;
   --accent-color: #44ff92;
+  /* --accent-color: #673de6; */
+  --background-light: #f9f9f9;
+  --background-dark: #11092A;
+  --background-dark-header: #19163A;
 }
 
 body {
