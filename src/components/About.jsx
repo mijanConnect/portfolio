@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function About({ isDark }) {
   return (
     // <div className="flex items-center justify-center flex-1">
@@ -92,15 +94,18 @@ export default function About({ isDark }) {
             isDark ? "text-white" : "text-gray-900"
           }`}
         >
-          Lorem Ipsum
+          Mijanur Rahman
         </h1>
         <p
           className={`text-sm md:text-base mb-6 ${
             isDark ? "text-gray-300" : "text-gray-600"
           }`}
         >
-          Software Engineer passionate about building scalable and high-quality
-          digital solutions.
+          Frontend Developer specializing in React.js with a strong foundation
+          in JavaScript, HTML, CSS, and REST APIs. Built multiple responsive
+          projects using modern front-end tools like Next.js, Redux, Bootstrap,
+          Tailwind CSS. Passionate about writing clean, efficient code and
+          continuously learning new technologies.
         </p>
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
@@ -116,7 +121,9 @@ export default function About({ isDark }) {
               isDark ? "btn-solid-dark" : "btn-solid-light"
             }`}
           >
-            Portfolio
+            <Link to="/portfolio">
+              <a>Portfolio</a>
+            </Link>
           </button>
         </div>
       </div>

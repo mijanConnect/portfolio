@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer({ isDark }) {
   const currentYear = new Date().getFullYear();
 
@@ -50,8 +52,8 @@ export default function Footer({ isDark }) {
                   { label: "Blogs", href: "/blog" },
                 ].map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
+                    <Link
+                      to={link.href}
                       className={`text-sm transition-colors ${
                         isDark ? "text-white" : "text-gray-600"
                       }`}
@@ -70,7 +72,7 @@ export default function Footer({ isDark }) {
                       }}
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -175,8 +177,7 @@ export default function Footer({ isDark }) {
                 isDark ? "text-[#E0E0E0]" : "text-gray-600"
               }`}
             >
-              Designed & Developed <span className="text-red-500"></span> by
-              Mijanur Rahman
+              Developed <span className="text-red-500"></span> by Mijanur Rahman
             </p>
           </div>
         </div>
