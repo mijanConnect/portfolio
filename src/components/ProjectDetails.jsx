@@ -45,7 +45,7 @@ export default function ProjectDetails({ isDark }) {
       {/* Back Button */}
       <button
         onClick={() => navigate("/portfolio")}
-        className={`mb-6 flex items-center gap-2 ${
+        className={`mb-3 lg:mb-6 flex items-center gap-2 ${
           isDark
             ? "text-accent-dark hover:text-accent-dark opacity-80 hover:opacity-100"
             : "text-accent-light hover:text-accent-light opacity-90 hover:opacity-100"
@@ -57,7 +57,7 @@ export default function ProjectDetails({ isDark }) {
 
       {/* Featured Image */}
       {project.image && (
-        <div className="rounded-lg overflow-hidden mb-8 h-96">
+        <div className="rounded-lg overflow-hidden mb-4 lg:mb-8 h-46 lg:h-96">
           <img
             src={project.image}
             alt={project.title}
@@ -67,8 +67,8 @@ export default function ProjectDetails({ isDark }) {
       )}
 
       {/* Project Header */}
-      <div className="mb-8">
-        <div className="flex flex-wrap items-center gap-3 mb-4">
+      <div className="mb-4 lg:mb-8">
+        <div className="flex flex-wrap items-center gap-1.5 lg:gap-3 mb-4">
           {project.tags.map((tag, i) => (
             <span
               key={i}
@@ -84,14 +84,18 @@ export default function ProjectDetails({ isDark }) {
         </div>
 
         <h1
-          className={`text-4xl md:text-5xl font-bold mb-4 ${
+          className={`text-2xl md:text-5xl font-bold mb-2 lg:mb-4 ${
             isDark ? "text-white" : "text-gray-900"
           }`}
         >
           {project.title}
         </h1>
 
-        <p className={`text-lg ${isDark ? "text-gray-400" : "text-gray-600"}`}>
+        <p
+          className={`text-base lg:text-lg ${
+            isDark ? "text-gray-400" : "text-gray-600"
+          }`}
+        >
           {project.description}
         </p>
       </div>
@@ -99,7 +103,7 @@ export default function ProjectDetails({ isDark }) {
       {/* Project Details */}
       {project.details && (
         <div
-          className={`rounded-lg p-6 mb-8 ${
+          className={`rounded-lg p-4 lg:p-6 mb-6 lg:mb-8 ${
             isDark
               ? "bg-gray-800/40 hover:bg-gray-800/60"
               : "bg-white hover:bg-gray-50"
@@ -175,7 +179,7 @@ export default function ProjectDetails({ isDark }) {
 
       {/* Key Features */}
       {project.features && project.features.length > 0 && (
-        <div className="mb-8">
+        <div className="mb-6 lg:mb-8">
           <h2
             className={`text-2xl font-bold mb-4 ${
               isDark ? "text-white" : "text-gray-900"
@@ -183,7 +187,7 @@ export default function ProjectDetails({ isDark }) {
           >
             Key Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-4">
             {project.features.map((feature, index) => (
               <div
                 key={index}
@@ -222,7 +226,7 @@ export default function ProjectDetails({ isDark }) {
 
       {/* Technologies Used */}
       {project.technologies && project.technologies.length > 0 && (
-        <div className="mb-8">
+        <div className="mb-6 lg:mb-8">
           <h2
             className={`text-2xl font-bold mb-4 ${
               isDark ? "text-white" : "text-gray-900"
@@ -234,7 +238,7 @@ export default function ProjectDetails({ isDark }) {
             {project.technologies.map((tech, index) => (
               <span
                 key={index}
-                className={`px-5 py-2 rounded-full font-semibold border`}
+                className={`px-5 py-2 rounded-full font-semibold border text-sm md:text-base`}
                 style={{
                   backgroundColor: isDark
                     ? "rgb(31, 41, 55)"
@@ -257,7 +261,7 @@ export default function ProjectDetails({ isDark }) {
       {/* Results/Impact */}
       {project.results && project.results.length > 0 && (
         <div
-          className={`rounded-lg p-6 mb-8 ${
+          className={`rounded-lg p-4 lg:p-6 mb-6 lg:mb-8 ${
             isDark
               ? "bg-gray-800/40 hover:bg-gray-800/60"
               : "bg-white hover:bg-gray-50"
@@ -306,7 +310,7 @@ export default function ProjectDetails({ isDark }) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={`px-6 py-3 rounded-full font-semibold transition-colors flex items-center gap-2`}
+              className={`px-6 py-3 rounded-full font-semibold transition-colors flex items-center gap-2 w-full md:w-auto justify-center`}
               style={{
                 backgroundColor: isDark
                   ? "var(--accent-color)"
@@ -329,7 +333,7 @@ export default function ProjectDetails({ isDark }) {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={`px-6 py-3 rounded-full font-semibold transition-colors flex items-center gap-2 ${
+              className={`px-6 py-3 rounded-full font-semibold transition-colors flex items-center gap-2 w-full md:w-auto justify-center ${
                 isDark
                   ? "bg-gray-700 text-white hover:bg-gray-600"
                   : "bg-gray-200 text-gray-900 hover:bg-gray-300"

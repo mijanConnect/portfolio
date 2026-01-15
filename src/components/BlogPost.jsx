@@ -45,7 +45,7 @@ export default function BlogPost({ isDark }) {
       {/* Back Button */}
       <button
         onClick={() => navigate("/blog")}
-        className={`mb-6 flex items-center gap-2 ${
+        className={`mb-4 lg:mb-6 flex items-center gap-2 ${
           isDark
             ? "text-accent-dark hover:text-accent-dark opacity-80 hover:opacity-100"
             : "text-accent-light hover:text-accent-light opacity-90 hover:opacity-100"
@@ -56,7 +56,7 @@ export default function BlogPost({ isDark }) {
       </button>
 
       {/* Featured Image */}
-      <div className="rounded-lg overflow-hidden mb-8 h-96">
+      <div className="rounded-lg overflow-hidden mb-4 lg:mb-8 h-46 lg:h-96">
         <img
           src={post.image}
           alt={post.title}
@@ -65,7 +65,7 @@ export default function BlogPost({ isDark }) {
       </div>
 
       {/* Post Header */}
-      <div className="mb-8">
+      <div className="mb-4 lg:mb-8">
         <div className="flex items-center gap-4 mb-4">
           <span
             className={`text-xs md:text-sm px-4 py-1 rounded-full font-semibold ${
@@ -84,7 +84,7 @@ export default function BlogPost({ isDark }) {
         </div>
 
         <h1
-          className={`text-4xl md:text-5xl font-bold mb-4 ${
+          className={`text-2xl md:text-5xl font-bold mb-4 ${
             isDark ? "text-white" : "text-gray-900"
           }`}
         >
@@ -102,7 +102,11 @@ export default function BlogPost({ isDark }) {
       </div>
 
       {/* Post Content */}
-      <div className={`prose ${isDark ? "prose-invert" : ""} max-w-none mb-12`}>
+      <div
+        className={`prose ${
+          isDark ? "prose-invert" : ""
+        } max-w-none mb-6 lg:mb-12`}
+      >
         <div
           className={`text-lg leading-relaxed space-y-6 ${
             isDark ? "text-gray-300" : "text-gray-700"
@@ -113,7 +117,7 @@ export default function BlogPost({ isDark }) {
 
       {/* Author Section */}
       <div
-        className={`rounded-lg p-6 mb-8 ${
+        className={`rounded-lg p-4 lg:p-6 mb-6 lg:mb-8 ${
           isDark
             ? "bg-gray-800/40 hover:bg-gray-800/60"
             : "bg-white hover:bg-gray-50"

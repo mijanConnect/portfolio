@@ -52,16 +52,18 @@ export default function Contact({ isDark }) {
     <>
       <div className="w-full">
         {/* Header */}
-        <div className="mb-12">
+        <div className="mb-4 lg:mb-12">
           <h1
-            className={`text-4xl md:text-5xl font-bold mb-4 ${
+            className={`text-2xl md:text-5xl font-bold mb-2 lg:mb-4 ${
               isDark ? "text-white" : "text-gray-900"
             }`}
           >
             Get In Touch
           </h1>
           <p
-            className={`text-lg ${isDark ? "text-gray-400" : "text-gray-600"}`}
+            className={`text-md lg:text-lg ${
+              isDark ? "text-gray-400" : "text-gray-600"
+            }`}
           >
             Have a question or want to work together? I'd love to hear from you.
             Feel free to reach out!

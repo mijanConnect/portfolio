@@ -90,7 +90,7 @@ export default function About({ isDark }) {
           Software Engineer
         </p>
         <h1
-          className={`text-xl md:text-3xl font-bold mb-3 ${
+          className={`text-2xl md:text-4xl font-bold mb-3 ${
             isDark ? "text-white" : "text-gray-900"
           }`}
         >

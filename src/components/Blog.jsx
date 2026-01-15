@@ -18,14 +18,14 @@ export default function Blog({ isDark }) {
     <>
       <div className="w-full">
         <h1
-          className={`text-4xl md:text-5xl font-bold mb-4 ${
+          className={`text-3xl md:text-5xl font-bold mb-2 lg:mb-4 ${
             isDark ? "text-white" : "text-gray-900"
           }`}
         >
           Blog
         </h1>
         <p
-          className={`text-lg mb-12 ${
+          className={`text-md lg:text-lg mb-4 lg:mb-12 ${
             isDark ? "text-gray-400" : "text-gray-600"
           }`}
         >
@@ -84,7 +84,7 @@ export default function Blog({ isDark }) {
 
                 {/* Title */}
                 <h2
-                  className={`text-xl md:text-2xl font-bold mb-3 hover:text-accent-dark transition-colors cursor-pointer ${
+                  className={`text-lg md:text-2xl font-bold mb-3 hover:text-accent-dark transition-colors cursor-pointer ${
                     isDark ? "text-white" : "text-gray-900"
                   }`}
                 >
