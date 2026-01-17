@@ -109,7 +109,7 @@ export default function Portfolio({ isDark }) {
           onMouseMove={(e) => handleMouseMove(e, navRef)}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
-          className={`sticky top-0 z-50 flex flex-nowrap gap-3 pb-2.5 lg:pb-4 pt-1 lg:pt-2 border-b overflow-x-auto ${
+          className={`sticky top-0 z-50 flex flex-nowrap gap-3 py-2.5 lg:py-4 border-b overflow-x-auto ${
             isDark ? "sticky-nav-dark" : "sticky-nav-light"
           } ${
             isDark
@@ -221,7 +221,7 @@ export default function Portfolio({ isDark }) {
             {portfolioData.experience.map((exp, index) => (
               <div key={index} className="flex gap-5">
                 {/* Left: Logo + Timeline */}
-                <div className="relative">
+                <div className="relative flex flex-col items-center self-stretch">
                   <div
                     className={`w-8 lg:w-14 h-8 lg:h-14 rounded-md flex items-center justify-center border ${
                       isDark
@@ -242,7 +242,7 @@ export default function Portfolio({ isDark }) {
                   {/* Vertical line (timeline) */}
                   {index !== portfolioData.experience.length - 1 && (
                     <div
-                      className={`absolute left-1/2 top-16 -translate-x-1/2 h-full w-px ${
+                      className={`absolute left-1/2 top-12 lg:top-16 -translate-x-1/2 -bottom-6 lg:-bottom-10 w-px ${
                         isDark ? "bg-gray-700" : "bg-gray-200"
                       }`}
                     />
