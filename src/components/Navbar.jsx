@@ -52,7 +52,7 @@ export default function Navbar({ isDark, onToggleDark }) {
             aria-label="Toggle dark mode"
           >
             <div
-              className={`relative inline-flex h-8 w-16 items-center rounded-full transition-all duration-300 shadow-lg`}
+              className={`relative inline-flex h-7.5 w-16 items-center rounded-full transition-all duration-300 shadow-lg`}
               style={{
                 backgroundImage: isDark
                   ? "linear-gradient(to right, rgb(55, 65, 81), rgb(31, 41, 55))"

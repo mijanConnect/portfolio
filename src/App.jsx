@@ -120,7 +120,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="flex-1 flex flex-col py-8 md:py-12">
+          <div className="flex-1 flex flex-col py-6 md:py-12">
             <div className="container mx-auto max-w-[1100px] px-4 space-y-6 flex-1 flex flex-col">
               <Routes>
                 <Route path="/" element={<About isDark={isDark} />} />

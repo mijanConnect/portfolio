@@ -45,7 +45,7 @@ export default function BlogPost({ isDark }) {
       {/* Back Button */}
       <button
         onClick={() => navigate("/blog")}
-        className={`mb-4 lg:mb-6 flex items-center gap-2 ${
+        className={`mb-3 lg:mb-6 flex items-center gap-2 ${
           isDark
             ? "text-accent-dark hover:text-accent-dark opacity-80 hover:opacity-100"
             : "text-accent-light hover:text-accent-light opacity-90 hover:opacity-100"

@@ -84,25 +84,25 @@ export default function About({ isDark }) {
       >
         <p
           className={`text-xs md:text-sm mb-1 ${
-            isDark ? "text-gray-400" : "text-gray-500"
+            isDark ? "text-accent-dark" : "text-accent-light"
           }`}
         >
           Software Engineer
         </p>
         <h1
-          className={`text-2xl md:text-4xl font-bold mb-3 ${
+          className={`text-2xl md:text-4xl font-bold mb-1 lg:mb-3 ${
             isDark ? "text-white" : "text-gray-900"
           }`}
         >
           Mijanur Rahman
         </h1>
         <p
-          className={`text-sm md:text-base mb-6 ${
+          className={`text-sm md:text-base mb-4 lg:mb-6 ${
             isDark ? "text-gray-300" : "text-gray-600"
           }`}
         >
-          Frontend Developer specializing in React.js with a strong foundation
-          in JavaScript, HTML, CSS, and REST APIs. Built multiple responsive
+          Software Engineer specializing in React.js with a strong foundation in
+          JavaScript, HTML, CSS, and REST APIs. Built multiple responsive
           projects using modern front-end tools like Next.js, Redux, Bootstrap,
           Tailwind CSS. Passionate about writing clean, efficient code and
           continuously learning new technologies.

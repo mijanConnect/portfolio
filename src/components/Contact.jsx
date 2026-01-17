@@ -61,7 +61,7 @@ export default function Contact({ isDark }) {
             Get In Touch
           </h1>
           <p
-            className={`text-md lg:text-lg ${
+            className={`text-sm lg:text-lg ${
               isDark ? "text-gray-400" : "text-gray-600"
             }`}
           >
@@ -70,10 +70,10 @@ export default function Contact({ isDark }) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           {/* Contact Information */}
           <div className="lg:col-span-1">
-            <div className="space-y-6">
+            <div className="space-y-2 lg:space-y-6">
               {contactInfo.map((info, index) => (
                 <a
                   key={index}
@@ -118,7 +118,7 @@ export default function Contact({ isDark }) {
 
             {/* Social Links */}
             <div
-              className={`mt-8 p-6 rounded-lg ${
+              className={`mt-6 lg:mt-8 p-4 lg:p-6 rounded-lg ${
                 isDark
                   ? "bg-gray-800/40 hover:bg-gray-800/60"
                   : "bg-white hover:bg-gray-50"
@@ -132,7 +132,7 @@ export default function Contact({ isDark }) {
               }}
             >
               <h3
-                className={`font-semibold mb-4 ${
+                className={`font-semibold mb-3 lg:mb-4 ${
                   isDark ? "text-white" : "text-gray-900"
                 }`}
               >
@@ -234,7 +234,7 @@ export default function Contact({ isDark }) {
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <div
-              className={`p-8 rounded-lg ${
+              className={`p-4 lg:p-8 rounded-lg ${
                 isDark ? "bg-gray-800/40" : "bg-white hover:bg-gray-50"
               }`}
               style={{
@@ -262,7 +262,7 @@ export default function Contact({ isDark }) {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-6">
                 {/* Name Input */}
                 <div>
                   <label

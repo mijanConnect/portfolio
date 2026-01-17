@@ -18,14 +18,14 @@ export default function Blog({ isDark }) {
     <>
       <div className="w-full">
         <h1
-          className={`text-3xl md:text-5xl font-bold mb-2 lg:mb-4 ${
+          className={`text-2xl md:text-5xl font-bold mb-2 lg:mb-4 ${
             isDark ? "text-white" : "text-gray-900"
           }`}
         >
           Blog
         </h1>
         <p
-          className={`text-md lg:text-lg mb-4 lg:mb-12 ${
+          className={`text-sm lg:text-lg mb-2 lg:mb-8 ${
             isDark ? "text-gray-400" : "text-gray-600"
           }`}
         >
@@ -34,7 +34,7 @@ export default function Blog({ isDark }) {
         </p>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8">
           {visiblePosts.map((post) => (
             <article
               key={post.id}
@@ -61,7 +61,7 @@ export default function Blog({ isDark }) {
               </div>
 
               {/* Blog Content */}
-              <div className="p-6 flex flex-col flex-1">
+              <div className="p-4 lg:p-6 flex flex-col flex-1">
                 {/* Category Badge */}
                 <div className="flex items-center gap-4 mb-3">
                   <span
@@ -84,7 +84,7 @@ export default function Blog({ isDark }) {
 
                 {/* Title */}
                 <h2
-                  className={`text-lg md:text-2xl font-bold mb-3 hover:text-accent-dark transition-colors cursor-pointer ${
+                  className={`text-lg md:text-2xl font-bold mb-2 lg:mb-3 hover:text-accent-dark transition-colors cursor-pointer ${
                     isDark ? "text-white" : "text-gray-900"
                   }`}
                 >
@@ -93,7 +93,7 @@ export default function Blog({ isDark }) {
 
                 {/* Excerpt */}
                 <p
-                  className={`mb-4 line-clamp-3 ${
+                  className={`mb-2 lg:mb-4 line-clamp-3 ${
                     isDark ? "text-gray-400" : "text-gray-600"
                   }`}
                 >
@@ -102,7 +102,7 @@ export default function Blog({ isDark }) {
 
                 {/* Footer */}
                 <div
-                  className={`flex items-center justify-between pt-4 border-t mt-auto ${
+                  className={`flex items-center justify-between pt-2.5 lg:pt-4 border-t mt-auto ${
                     isDark ? "border-gray-700" : "border-gray-300"
                   }`}
                 >
@@ -132,7 +132,7 @@ export default function Blog({ isDark }) {
 
         {/* Load More Button */}
         {hasMorePosts && (
-          <div className="mt-12 flex justify-center">
+          <div className="mt-4 lg:mt-12 flex justify-center">
             <button
               onClick={handleLoadMore}
               className={`px-8 py-3 font-bold rounded-full transition-colors duration-300 flex items-center gap-2 ${

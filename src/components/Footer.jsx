@@ -12,13 +12,13 @@ export default function Footer({ isDark }) {
       } transition-colors`}
     >
       <div className={`${isDark ? "bg-gray-800/40" : ""} transition-colors`}>
-        <div className="container mx-auto max-w-[1100px] px-4 py-12">
+        <div className="container mx-auto max-w-[1100px] px-4 py-6 lg:py-12">
           {/* Footer Content */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8">
             {/* About Section */}
             <div>
               <h3
-                className={`text-lg font-bold mb-4 ${
+                className={`text-lg font-bold mb-2 lg:mb-4 ${
                   isDark ? "text-accent-dark" : "text-accent-light"
                 }`}
               >
@@ -38,7 +38,7 @@ export default function Footer({ isDark }) {
             {/* Quick Links */}
             <div>
               <h3
-                className={`text-lg font-semibold mb-4 ${
+                className={`text-lg font-semibold mb-2 lg:mb-4 ${
                   isDark ? "text-accent-dark" : "text-accent-light"
                 }`}
               >
@@ -81,7 +81,7 @@ export default function Footer({ isDark }) {
             {/* Social Links */}
             <div>
               <h3
-                className={`text-lg font-semibold mb-4 ${
+                className={`text-lg font-semibold mb-2 lg:-mb-4 ${
                   isDark ? "text-accent-dark" : "text-accent-light"
                 }`}
               >
@@ -160,11 +160,11 @@ export default function Footer({ isDark }) {
           <div
             className={`border-t ${
               isDark ? "border-gray-700" : "border-gray-300"
-            } my-8`}
+            } my-6 lg:my-8`}
           ></div>
 
           {/* Bottom Section */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-2 lg:gap-4">
             <p
               className={`text-sm ${
                 isDark ? "text-[#E0E0E0]" : "text-gray-600"

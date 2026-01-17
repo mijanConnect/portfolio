@@ -31,7 +31,7 @@ export default function Portfolio({ isDark }) {
 
     const observer = new IntersectionObserver(
       observerCallback,
-      observerOptions
+      observerOptions,
     );
 
     // Observe all sections
@@ -89,14 +89,14 @@ export default function Portfolio({ isDark }) {
         {/* Header */}
         <div className="mb-2 md:mb-10">
           <h1
-            className={`text-2xl md:text-5xl font-bold mb-4 ${
+            className={`text-2xl md:text-5xl font-bold mb-1 lg:mb-4 ${
               isDark ? "text-white" : "text-gray-900"
             }`}
           >
             Portfolio
           </h1>
           <p
-            className={`text-lg ${isDark ? "text-gray-400" : "text-gray-600"}`}
+            className={`text-sm lg:text-lg ${isDark ? "text-gray-400" : "text-gray-600"}`}
           >
             A showcase of my professional journey, projects, and expertise
           </p>
@@ -109,7 +109,7 @@ export default function Portfolio({ isDark }) {
           onMouseMove={(e) => handleMouseMove(e, navRef)}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
-          className={`sticky top-0 z-50 flex flex-nowrap gap-3 pb-4 pt-4 border-b overflow-x-auto ${
+          className={`sticky top-0 z-50 flex flex-nowrap gap-3 pb-2.5 lg:pb-4 pt-1 lg:pt-2 border-b overflow-x-auto ${
             isDark ? "sticky-nav-dark" : "sticky-nav-light"
           } ${
             isDark
@@ -130,14 +130,14 @@ export default function Portfolio({ isDark }) {
             <button
               key={section}
               onClick={() => handleTabClick(section)}
-              className={`px-4 py-1.5 rounded-full font-semibold transition-all capitalize text-nowrap ${
+              className={`px-4 py-1.5 rounded-full font-semibold transition-all capitalize text-nowrap text-sm lg:text-base ${
                 activeSection === section
                   ? isDark
                     ? "bg-accent-dark text-gray-900"
                     : "bg-accent-light text-white"
                   : isDark
-                  ? "bg-gray-800/40 hover:bg-gray-800/60"
-                  : "bg-white hover:bg-gray-50"
+                    ? "bg-gray-800/40 hover:bg-gray-800/60"
+                    : "bg-white hover:bg-gray-50"
               }`}
               style={{
                 border: `1px solid ${
@@ -158,7 +158,7 @@ export default function Portfolio({ isDark }) {
         <div id="section-overview" className="mb-8 lg:mb-16 scroll-mt-28">
           <div className="animate-fadeIn">
             <p
-              className={`text-lg leading-relaxed mt-4 ${
+              className={`text-sm lg:text-lg leading-relaxed mt-2 lg:mt-4 ${
                 isDark ? "text-gray-300" : "text-gray-700"
               }`}
             >
@@ -166,7 +166,7 @@ export default function Portfolio({ isDark }) {
             </p>
 
             {/* Key Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5 lg:gap-6 mt-4 lg:mt-8">
               {[
                 { label: "Years Experience", value: "1.5+" },
                 { label: "Projects Completed", value: "10+" },
@@ -174,7 +174,7 @@ export default function Portfolio({ isDark }) {
               ].map((stat, index) => (
                 <div
                   key={index}
-                  className={`p-6 rounded-lg text-center ${
+                  className={`p-4 lg:p-6 rounded-lg text-center ${
                     isDark
                       ? "bg-gray-800/40 hover:bg-gray-800/60"
                       : "bg-white hover:bg-gray-50"
@@ -210,27 +210,27 @@ export default function Portfolio({ isDark }) {
         {/* Experience Section */}
         <div id="section-experience" className="mb-8 lg:mb-16 scroll-mt-28">
           <h2
-            className={`text-2xl font-bold mb-6 lg:mb-10 ${
+            className={`text-2xl lg:text-3xl font-bold mb-4 lg:mb-10 ${
               isDark ? "text-white" : "text-gray-900"
             }`}
           >
             Experience
           </h2>
 
-          <div className="space-y-10">
+          <div className="space-y-6 lg:space-y-10">
             {portfolioData.experience.map((exp, index) => (
               <div key={index} className="flex gap-5">
                 {/* Left: Logo + Timeline */}
                 <div className="relative">
                   <div
-                    className={`w-14 h-14 rounded-md flex items-center justify-center border ${
+                    className={`w-8 lg:w-14 h-8 lg:h-14 rounded-md flex items-center justify-center border ${
                       isDark
                         ? "bg-gray-800 border-gray-700"
                         : "bg-white border-gray-200"
                     }`}
                   >
                     <i
-                      className="fa-solid fa-briefcase text-xl"
+                      className="fa-solid fa-briefcase text-md lg:text-xl"
                       style={{
                         color: isDark
                           ? "var(--accent-color)"
@@ -253,7 +253,7 @@ export default function Portfolio({ isDark }) {
                 <div className="flex-1">
                   {/* Role */}
                   <h3
-                    className={`text-[20px] font-semibold ${
+                    className={`text-lg lg:text-[20px] font-semibold ${
                       isDark ? "text-white" : "text-gray-900"
                     }`}
                   >
@@ -308,7 +308,7 @@ export default function Portfolio({ isDark }) {
         {/* Projects Section */}
         <div id="section-projects" className="mb-8 lg:mb-16 scroll-mt-28">
           <h2
-            className={`text-2xl font-bold mb-6 lg:mb-8 ${
+            className={`text-2xl lg:text-3xl font-bold mb-4 lg:mb-8 ${
               isDark ? "text-white" : "text-gray-900"
             }`}
           >
@@ -483,7 +483,7 @@ export default function Portfolio({ isDark }) {
           className="mb-8 lg:mb-16 scroll-mt-28"
         >
           <h2
-            className={`text-2xl font-bold mb-6 lg:mb-8 ${
+            className={`text-2xl lg:text-3xl font-bold mb-4 lg:mb-8 ${
               isDark ? "text-white" : "text-gray-900"
             }`}
           >
@@ -509,7 +509,7 @@ export default function Portfolio({ isDark }) {
         {/* Education Section */}
         <div id="section-education" className="mb-8 lg:mb-16 scroll-mt-28">
           <h2
-            className={`text-3xl font-bold mb-6 lg:mb-8 ${
+            className={`text-2xl lg:text-3xl font-bold mb-4 lg:mb-8 ${
               isDark ? "text-white" : "text-gray-900"
             }`}
           >
@@ -591,17 +591,17 @@ export default function Portfolio({ isDark }) {
         {/* Skills Section */}
         <div id="section-skills" className="mb-8 lg:mb-16 scroll-mt-28">
           <h2
-            className={`text-2xl font-bold mb-6 lg:mb-8 ${
+            className={`text-2xl lg:text-3xl font-bold mb-4 lg:mb-8 ${
               isDark ? "text-accent-color" : "text-gray-900"
             }`}
           >
             Skills
           </h2>
-          <div className="animate-fadeIn space-y-8">
+          <div className="animate-fadeIn space-y-4 lg:space-y-8">
             {portfolioData.skills.map((skillGroup, index) => (
               <div key={index}>
                 <h3
-                  className={`text-lg font-bold mb-4 ${
+                  className={`text-lg font-bold mb-2 lg:mb-4 ${
                     isDark ? "text-white" : "text-gray-900"
                   }`}
                 >
@@ -651,7 +651,7 @@ export default function Portfolio({ isDark }) {
           className="mb-8 lg:mb-16 scroll-mt-28"
         >
           <h2
-            className={`text-2xl font-bold mb-6 lg:mb-8 ${
+            className={`text-2xl lg:text-3xl font-bold mb-4 lg:mb-8 ${
               isDark ? "text-white" : "text-gray-900"
             }`}
           >
@@ -727,13 +727,13 @@ export default function Portfolio({ isDark }) {
         {/* Certifications Section */}
         <div id="section-certifications" className="mb-0 lg:mb-16 scroll-mt-28">
           <h2
-            className={`text-2xl font-bold mb-6 lg:mb-8 ${
+            className={`text-2xl lg:text-3xl font-bold mb-4 lg:mb-8 ${
               isDark ? "text-white" : "text-gray-900"
             }`}
           >
             Certifications
           </h2>
-          <div className="animate-fadeIn grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="animate-fadeIn grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
             {portfolioData.certifications.map((cert, index) => (
               <div
                 key={index}

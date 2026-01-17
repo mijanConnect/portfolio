@@ -57,7 +57,7 @@ export default function ProjectDetails({ isDark }) {
 
       {/* Featured Image */}
       {project.image && (
-        <div className="rounded-lg overflow-hidden mb-4 lg:mb-8 h-46 lg:h-96">
+        <div className="rounded-lg overflow-hidden mb-3 lg:mb-8 h-46 lg:h-96">
           <img
             src={project.image}
             alt={project.title}
@@ -68,7 +68,7 @@ export default function ProjectDetails({ isDark }) {
 
       {/* Project Header */}
       <div className="mb-4 lg:mb-8">
-        <div className="flex flex-wrap items-center gap-1.5 lg:gap-3 mb-4">
+        <div className="flex flex-wrap items-center gap-1.5 lg:gap-3 mb-3 lg:mb-4">
           {project.tags.map((tag, i) => (
             <span
               key={i}
@@ -92,7 +92,7 @@ export default function ProjectDetails({ isDark }) {
         </h1>
 
         <p
-          className={`text-base lg:text-lg ${
+          className={`text-sm lg:text-lg ${
             isDark ? "text-gray-400" : "text-gray-600"
           }`}
         >
@@ -115,7 +115,7 @@ export default function ProjectDetails({ isDark }) {
           }}
         >
           <h2
-            className={`text-2xl font-bold mb-4 ${
+            className={`text-2xl font-bold mb-2 lg:mb-4 ${
               isDark ? "text-white" : "text-gray-900"
             }`}
           >
@@ -129,7 +129,7 @@ export default function ProjectDetails({ isDark }) {
             {project.details.overview && (
               <div>
                 <h3
-                  className={`text-lg font-semibold mb-2`}
+                  className={`text-lg font-semibold mb-0 lg:mb-2`}
                   style={{
                     color: isDark
                       ? "var(--accent-color)"
@@ -138,14 +138,16 @@ export default function ProjectDetails({ isDark }) {
                 >
                   Overview
                 </h3>
-                <p>{project.details.overview}</p>
+                <p className="text-sm lg:text-base">
+                  {project.details.overview}
+                </p>
               </div>
             )}
 
             {project.details.challenge && (
               <div>
                 <h3
-                  className={`text-lg font-semibold mb-2`}
+                  className={`text-lg font-semibold mb-0 lg:mb-2`}
                   style={{
                     color: isDark
                       ? "var(--accent-color)"
@@ -154,14 +156,16 @@ export default function ProjectDetails({ isDark }) {
                 >
                   Challenge
                 </h3>
-                <p>{project.details.challenge}</p>
+                <p className="text-sm lg:text-base">
+                  {project.details.challenge}
+                </p>
               </div>
             )}
 
             {project.details.solution && (
               <div>
                 <h3
-                  className={`text-lg font-semibold mb-2`}
+                  className={`text-lg font-semibold mb-0 lg:mb-2`}
                   style={{
                     color: isDark
                       ? "var(--accent-color)"
@@ -170,7 +174,9 @@ export default function ProjectDetails({ isDark }) {
                 >
                   Solution
                 </h3>
-                <p>{project.details.solution}</p>
+                <p className="text-sm lg:text-base">
+                  {project.details.solution}
+                </p>
               </div>
             )}
           </div>
@@ -191,7 +197,7 @@ export default function ProjectDetails({ isDark }) {
             {project.features.map((feature, index) => (
               <div
                 key={index}
-                className={`p-4 rounded-lg flex items-center gap-3 ${
+                className={`p-4 rounded-lg flex items-start lg:items-center gap-3 ${
                   isDark
                     ? "bg-gray-800/40 hover:bg-gray-800/60"
                     : "bg-white hover:bg-gray-50"
@@ -205,7 +211,7 @@ export default function ProjectDetails({ isDark }) {
                 }}
               >
                 <div
-                  className={`shrink-0 w-8 h-8 rounded-lg flex items-center justify-center`}
+                  className={`shrink-0 w-6 lg:w-6 h-6 lg:h-6 rounded-sm flex items-center justify-center`}
                   style={{
                     backgroundColor: isDark
                       ? "var(--accent-color)"
@@ -213,9 +219,11 @@ export default function ProjectDetails({ isDark }) {
                     color: isDark ? "var(--primary-dark)" : "white",
                   }}
                 >
-                  <i className="fa-solid fa-check"></i>
+                  <i className="fa-solid fa-check text-xs lg:text-sm"></i>
                 </div>
-                <p className={isDark ? "text-gray-300" : "text-gray-700"}>
+                <p
+                  className={`text-sm lg:text-base ${isDark ? "text-gray-300" : "text-gray-700"}`}
+                >
                   {feature}
                 </p>
               </div>
@@ -273,7 +281,7 @@ export default function ProjectDetails({ isDark }) {
           }}
         >
           <h2
-            className={`text-2xl font-bold mb-4 ${
+            className={`text-2xl font-bold mb-2 lg:mb-4 ${
               isDark ? "text-white" : "text-gray-900"
             }`}
           >
@@ -295,7 +303,7 @@ export default function ProjectDetails({ isDark }) {
                       : "var(--primary-color)",
                   }}
                 ></i>
-                <span>{result}</span>
+                <span className="text-sm lg:text-base">{result}</span>
               </li>
             ))}
           </ul>
