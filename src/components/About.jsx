@@ -120,7 +120,7 @@ export default function About({ isDark }) {
         <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
           <button
             onClick={handleResumeDownload}
-            className={`px-4 md:px-6 py-2 rounded-full text-sm md:text-base font-semibold transition ${
+            className={`px-4 md:px-6 py-2 rounded-full text-sm md:text-base font-semibold transition cursor-pointer ${
               isDark ? "btn-primary-dark" : "btn-primary-light"
             }`}
           >

@@ -81,7 +81,7 @@ export default function Footer({ isDark }) {
             {/* Social Links */}
             <div>
               <h3
-                className={`text-lg font-semibold mb-2 lg:-mb-4 ${
+                className={`text-lg font-semibold mb-2 lg:mb-4 ${
                   isDark ? "text-accent-dark" : "text-accent-light"
                 }`}
               >

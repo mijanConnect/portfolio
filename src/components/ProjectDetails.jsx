@@ -30,7 +30,7 @@ export default function ProjectDetails({ isDark }) {
         <h2 className="text-2xl font-bold mb-4">Project not found</h2>
         <button
           onClick={() => navigate("/portfolio")}
-          className={`px-6 py-2 rounded-lg font-semibold transition-colors ${
+          className={`px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer ${
             isDark ? "btn-solid-dark" : "btn-solid-light"
           }`}
         >
@@ -45,7 +45,7 @@ export default function ProjectDetails({ isDark }) {
       {/* Back Button */}
       <button
         onClick={() => navigate("/portfolio")}
-        className={`mb-3 lg:mb-6 flex items-center gap-2 ${
+        className={`mb-3 lg:mb-6 flex items-center gap-2 cursor-pointer ${
           isDark
             ? "text-accent-dark hover:text-accent-dark opacity-80 hover:opacity-100"
             : "text-accent-light hover:text-accent-light opacity-90 hover:opacity-100"
@@ -358,7 +358,7 @@ export default function ProjectDetails({ isDark }) {
       <div className="text-center">
         <button
           onClick={() => navigate("/portfolio")}
-          className={`px-8 py-3 rounded-full font-semibold transition-colors`}
+          className={`px-8 py-3 rounded-full font-semibold transition-colors cursor-pointer`}
           style={{
             backgroundColor: isDark
               ? "var(--accent-color)"
